@@ -1,3 +1,12 @@
+## 1 Nisan 2022 Cuma DDK5 Sinavi
+
+Bu sinavda, basit duzeydeki bazi algoritmalari C# ile uygulamaya calistik.  
+Asagidaki cozumlerin C# / .NET platformunda cok daha performansli ve cok daha fazla kullanilan yontemleri olabilir ancak simdilik elimizdeki malzemelerin kisitli oldugunu varsaymamiz gerekiyor (egitimde bu konular islendigi icin).
+
+Sorulari [https://1drv.ms/w/s!Amo4MDOMor2-igvLxnAIcuAaDn3w?e=fd7GWt](adresinde bulabilirsiniz).
+
+Zaman kisiti yuzunden projelestirme yapamadim.
+
 ```c#
 void PrintHelloWord10Times()
 {
@@ -9,6 +18,9 @@ void PrintHelloWord10Times()
 
 void PrintEvenNumber(int maxVal)
 {
+    // 2'ye bolunebilen degerleri daha verimli bir sekilde bulmak icin
+    // i += 2 diyebiliriz.
+    // bu da bir alternatif olarak bilinmeli.
     for(int  i = 0; i <= maxVal; i++)
     {
         if(i%2 == 0)
@@ -91,6 +103,8 @@ void CalculateTriangleArea()
     Console.WriteLine("bu ucgenin alani:" + result);
 }
 
+// iyi bir isimlendirme olmadi. evet. amacimiz a'nin b'ye tam bolunup bolunmedigini anlamak.
+// b burada bolen, a bolunen.
 void Divide(int a, int b)
 {
     if(a%b == 0)
@@ -103,6 +117,7 @@ else
     }
 }
 
+// carpma islemini * operatoru yokmus gibi yaziyoruz.
 void WithoutMultiplyOperator(int num)
 {
     int result = 0;
@@ -113,6 +128,12 @@ void WithoutMultiplyOperator(int num)
     Console.WriteLine("sonuc:" + result);
 }
 
+// baska bir yontem olarak bir dongu ile bunu hesaplayabiliriz.
+// sunun gibi bir sey misal:
+// while(num /= 10) != 0) { digits++; }
+// 10'a boluyoruz ve geri atiyoruz. eger sonucumuz 0 degilse halen basamaklarimiz var demektir.
+// bu durumda bolmeye devam ederek basamak sayacini arttirmamiz gerekiyor.
+// bu yontem string olusturmaktan daha verimli olabilir.
 void DigitCount()
 {
     Console.WriteLine("basamak sayisi hesaplanmasi gereken sayi: ");
@@ -136,6 +157,8 @@ void FindMinimumValueAndIndex()
     }
     Console.WriteLine("Minimum deger {0} ve indexi {1}", value, indexNo);
 }
+
+// amacimiz yedek bir array kullanmadan elimizdeki array'i ters cevirmek.
 void ReverseArrayWithoudBackup()
 {
     int[] bar = { 56, 80, 20, 18, 42, 61, 73 };
@@ -152,7 +175,6 @@ void ReverseArrayWithoudBackup()
     {
         Console.WriteLine(i);
     }
-
 }
 
 
@@ -212,18 +234,4 @@ void Rectangle1_17()
     }
 }
 
-
-
-void PrintForm_18()
-{
-    for(int i = 0; i < 5; i++)
-    {
-        for(int j = 0; j < 5; j++)
-        {
-            int c = i + j + 2;
-            Console.Write(" {0}", c+1);
-        }
-        Console.WriteLine();
-    }
-}
 ```
