@@ -204,9 +204,10 @@ void Rectangle1_17()
     int sym = 0;    int n = 7;
     for( int i = 0; i < n; i++)
     {
-        for(int     j  = 0; j <= i; j++)
+        for(int     j  = 1; j <= i; j++)
         {
-            sym = i + i + j;            Console.Write(" {0} ", sym);
+            sym = i + i + j;
+            Console.Write(" {0} ", sym);
         }
         Console.WriteLine();
     }
