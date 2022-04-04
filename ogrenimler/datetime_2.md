@@ -40,6 +40,7 @@ else if(now.DayOfWeek == DayOfWeek.Wednesday)
     }
 }
 
+
 void Difference1NisAnAndOctober29()
 {
     DateTime nis1 = new DateTime(2022, 4, 1);
@@ -48,7 +49,7 @@ void Difference1NisAnAndOctober29()
     Console.WriteLine("1 nisan ile 29 ekim arasinda {0} gun var", difference.Days);
 }
 
-// 4. soru
+
 void Quest4()
 {
     DateTime now = DateTime.Now;
@@ -57,12 +58,13 @@ void Quest4()
 }
 
 // 5. soru
+
 void newYearQuest()
 {
     DateTime now = DateTime.Now;
     DateTime nextYear = new DateTime(now.Year+1, 1, 1);
     TimeSpan difference = nextYear - now;
-    Console.WriteLine("Yilbasina {0} gun var", difference.Days - 1);
+    Console.WriteLine("Yilbasina {0} gun var", difference.Days);
 }
 
 BirthDayElapsedNow();
@@ -71,3 +73,8 @@ Difference1NisAnAndOctober29();
 Quest4();
 newYearQuest();
 ```
+
+## Ogrelinenler
+
+- `DateTime`'in `DaysInMonth` Adli bir fonksiyonu var. Yil ve ayi aliyor. Bize ayin kac cektigini gosteriyor.
+	* `static` olabilir (ogrenmedigimiz bir kavram, kendi edinimlerim).
