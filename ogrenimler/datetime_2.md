@@ -74,6 +74,51 @@ Quest4();
 newYearQuest();
 ```
 
+### Gün Hesaplamalı Bazı DateTime Soruları
+
+Hey, burada az çok matematik var. Ama matematiğimizin doğru çalışıp çalışmadığını anlamamız için biraz test yapmamız gerekiyor.
+Eğitim süremizde bu testleri yazmamız mümkün değil. Şimdilik mantığa odaklanmamız ve yürüdüğümüz algoritmayı düşünmemiz gerekiyor.
+Yine de az çok test edildiler ve başarıları kontrol edildi. O kadar da yumuşak değiliz :) .
+
+
+```c#
+
+// 7) Önümüzdeki ayın ilk pazartesisi hangi güne denk geliyor?
+
+void Quest7()
+{
+    DateTime now = DateTime.Now;
+    now = now.AddMonths(1);
+    now = now.AddDays(-now.Day);
+
+    for(int i = 0; i < 7; i++)
+    {
+        if(now.DayOfWeek == DayOfWeek.Monday)
+        {
+            Console.WriteLine("Ilk pazartesi {0} gunudur.", now.Day);
+            return;
+        }
+        now = now.AddDays(1);
+    }
+}
+
+//8) Ağustos ayının ilk pazar günü hangi güne denk geliyor?
+
+void Quest8()
+{
+    DateTime agu = new DateTime(2022, 8, 1);
+    for (int i = 0; i < 7; i++)
+    {
+        if (agu.DayOfWeek == DayOfWeek.Sunday)
+        {
+            Console.WriteLine("Agustosun ilk pazari {0} gunudur", agu.Day);
+        }
+        agu = agu.AddDays(1);
+    }
+}
+```
+
+
 ## Ogrelinenler
 
 - `DateTime`'in `DaysInMonth` Adli bir fonksiyonu var. Yil ve ayi aliyor. Bize ayin kac cektigini gosteriyor.
