@@ -76,8 +76,8 @@ newYearQuest();
 
 ### Gün Hesaplamalı Bazı DateTime Soruları
 
-Hey, burada az çok matematik var. Ama matematiğimizin doğru çalışıp çalışmadığını anlamamız için biraz test yapmamız gerekiyor.
-Eğitim süremizde bu testleri yazmamız mümkün değil. Şimdilik mantığa odaklanmamız ve yürüdüğümüz algoritmayı düşünmemiz gerekiyor.
+Hey, burada az çok matematik var. Ama matematiğimizin doğru çalışıp çalışmadığını anlamamız için biraz test yapmamız gerekiyor.  
+Eğitim süremizde bu testleri yazmamız mümkün değil. Şimdilik mantığa odaklanmamız ve yürüdüğümüz algoritmayı düşünmemiz gerekiyor.  
 Yine de az çok test edildiler ve başarıları kontrol edildi. O kadar da yumuşak değiliz :) .
 
 
