@@ -1,7 +1,7 @@
 ## 5 Nisan 2022 - DateTime Sorulari
 
-soru:  
-iki tarih arasinda kac **pazar gunu** var?  
+### soru - iki tarih arasinda kac **pazar gunu** var?
+
 Mod veya + 7 seklinde cozumler olabilir. 
 
 ```c#
@@ -9,18 +9,42 @@ Mod veya + 7 seklinde cozumler olabilir.
 int getSundayCountByTwoDate(DateTime startDate, DateTime endDate)
 {
     int counter = 0;
-    while(startDate < endDate)
+    while ((startDate = startDate.AddDays(1)) < endDate)
     {
-if(startDate.DayOfWeek == DayOfWeek.Sunday)
+        if (startDate.DayOfWeek == DayOfWeek.Sunday)
         {
             counter++;
-        }    
-        startDate = startDate.AddDays(1);
+        }
     }
     return counter;
 }
 ```
-DateTime s1 = new DateTime(2022, 2, 5);
-DateTime s2 = new DateTime(2022, 5, 28);
-int sunday = getSundayCount(s1, s2);
-Console.WriteLine("Iki tarih arasindaki pazar gunu sayisi : {0}", sunday);
+
+
+### Soru - Çalışma Günü Sorusu
+
+Metoda geçilen `DateTime`'a çalışma günlerini ekliyoruz. Yani hafta sonlarını atlıyoruz.
+
+```c#
+DateTime AddWorkDays(DateTime startDate, int day)
+{
+    int counter = 0;
+    while(counter <= day)
+    {
+        startDate = startDate.AddDays(1);
+        if(startDate.DayOfWeek == DayOfWeek.Sunday || startDate.DayOfWeek == DayOfWeek.Saturday)
+        {
+            continue;
+        }
+        counter++;
+    }
+    return startDate;
+}
+
+```
+
+
+## Ogrenimler
+
+- `DateTime`'in operatorleri cok verimli kod yazmamizi sagliyor, tipki C++'da oldugu gibi.
+- `while`'da ek bir parantez acarak degerlere atama yapabiliyoruz: `while((dt = dt.AddDays(1)) < anotherDate) { .......... }`
