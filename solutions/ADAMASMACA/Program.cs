@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ListLession
+namespace AdamAsmaca
 {
     class Program
     {
@@ -41,7 +41,6 @@ namespace ListLession
             //gameWord oyunda oynanacak kelime
             string gameWord = words[randomWord];
 
-
             List<char> gameWordChars = new List<char>();
             List<char> gameWordCharsBackup = new List<char>();
             char[] gameWordHidden = new char[gameWord.Length];
@@ -50,7 +49,7 @@ namespace ListLession
             {
                 gameWordChars.Add(gameWord[i]);
                 gameWordCharsBackup.Add(gameWord[i]);
-                gameWordHidden [i] = '_';
+                gameWordHidden[i] = '_';
             }
             int hp = 5;
 

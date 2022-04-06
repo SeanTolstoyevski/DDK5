@@ -5,7 +5,7 @@ Sirada **generic** yapilar var.
 
 `List`'ler otomatik olarak buyuyebilen bir container yapisi.
 
-Iste bir List ornegi (direk olarak ogeleri baslatilan):
+Iste bir List ornegi (direk olarak ogeleri baslatilan. **Bkz. collection-initializer syntax**):
 
 ```c#
 using System.Collections.Generic;
@@ -41,6 +41,8 @@ namespace ListLession
 }
 
 ```
+
+
 
 ## Ogrenimler
 
