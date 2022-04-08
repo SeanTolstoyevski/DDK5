@@ -7,7 +7,14 @@ namespace LambdaOgrenimi
         static void Main()
         {
 
-            Func<int, int, int> maximum = (x, y) =>
+            // Func<int, int, int> maximum = (x, y) =>
+            // {
+            //     if (y > x)
+            //         return y;
+            //     return x;
+            // };
+
+            var  maximum = (int x, int y) =>
             {
                 if (y > x)
                     return y;
