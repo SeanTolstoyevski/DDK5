@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DDK5QUESTIONS.csproj",
+                "${workspaceFolder}/LambdaOgreniyorum.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/DDK5QUESTIONS.csproj",
+                "${workspaceFolder}/LambdaOgreniyorum.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/DDK5QUESTIONS.csproj"
+                "${workspaceFolder}/LambdaOgreniyorum.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
