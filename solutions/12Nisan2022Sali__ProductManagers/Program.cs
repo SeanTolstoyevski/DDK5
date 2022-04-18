@@ -20,14 +20,13 @@ namespace HelloCSharp
                 products = await JsonSerializer.DeserializeAsync<List<Product>>(await streamTask);
             }
 
-            int less50PriceCount = products.Where(v => v.unitPrice < 50.0m).ToList().Count();
+            int less50PriceCount = products.Where(v => v.unitPrice < 50.0m).Count();
             Console.WriteLine($"fiyati 50'den az {less50PriceCount} urun var.");
 
-            int Category3AndSuplier2Count = products.Where(v => v.supplierId == 2 && v.categoryId == 3).ToList().Count();
+            int Category3AndSuplier2Count = products.Where(v => v.supplierId == 2 && v.categoryId == 3).Count();
             Console.WriteLine($"Kategorisi 3 ve tedarikçi'si 2 olan {Category3AndSuplier2Count} var");
 
-
-            int Price50_100RangeCount = products.Where(v => v.unitPrice >= 50.0m && v.unitPrice <= 100.0m).ToList().Count();
+            int Price50_100RangeCount = products.Where(v => v.unitPrice >= 50.0m && v.unitPrice <= 100.0m).Count();
             Console.WriteLine($"Fiyati 50-100 arasinda {Price50_100RangeCount} urun var.");
 
             Console.WriteLine("a harfi ile baslayan urunler:");
