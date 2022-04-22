@@ -13,8 +13,8 @@ public class Song : IPlay, ISongEntity
     }
 
 
-    public DateTime LastPlayedDate  { get; set; }
-    public string Name { get; set; }    
+    public DateTime LastPlayedDate { get; set; }
+    public string Name { get; set; }
     public DateTime annoDate { get; set; }
     public DateTime ReleaseDate { get => annoDate.AddDays(10); }
     public Artist artist { get; set; }
