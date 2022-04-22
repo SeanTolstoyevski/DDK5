@@ -1,2 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Collections.Generic;
+
+namespace Player;
+
+class Program
+{
+    static void main()
+    {
+        var s1 = new Song("Cok yorgunum");
+        var sw2 = new Song("");
+        var songManager = new SongManager("# asiklari");
+        
+
+    }
+
+}
