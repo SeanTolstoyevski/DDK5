@@ -9,6 +9,11 @@ public class User
     }
     public string name { get; set; }
     public string surname { get; set; }
+    
+    public string Email { get; set; }
+    public string Password { get =>  "hashing islemleri"; }
+    public string Address { get; set; }
+
 
 }
 
