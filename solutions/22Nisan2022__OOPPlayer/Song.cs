@@ -9,7 +9,7 @@ public class Song : IPlay, ISongEntity
 
     public void Play(Song song)
     {
-        Console.WriteLine("Caliniyor: {0}", song.Name);
+        Console.WriteLine("dum tis tek tis tis fis fis");
     }
 
 

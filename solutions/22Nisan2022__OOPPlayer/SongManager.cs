@@ -15,7 +15,7 @@ public class SongManager
 
     public void PlaySong(IPlay playable)
     {
-        Console.WriteLine("Caliniyor");
+        Console.WriteLine("Caliniyor : {0}", song.Name);
         playable.Play(song);
     }
 
