@@ -1,6 +1,6 @@
 namespace Player;
 
-public class Song : IPlay
+public class Song : IPlay, ISongEntity
 {
     public Song(string name)
     {
@@ -13,6 +13,7 @@ public class Song : IPlay
     }
 
 
+    public DateTime LastPlayedDate  { get; set; }
     public string Name { get; set; }    
     public DateTime annoDate { get; set; }
     public DateTime ReleaseDate { get => annoDate.AddDays(10); }
