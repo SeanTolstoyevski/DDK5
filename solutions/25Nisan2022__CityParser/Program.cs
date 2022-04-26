@@ -45,6 +45,8 @@ class Program
         {
             Console.WriteLine("City: {0} - Country: {1}", c.CityName, c.country.Name);
         }
+
+
     }
 }
 
