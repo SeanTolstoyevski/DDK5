@@ -26,6 +26,7 @@ public class ProductManager
             product.UnitsInStock = Convert.ToInt32(reader["UnitsInStock"]);
             products.Add(product);
         }
+        dbConn.Close();
         return products;
     }
 

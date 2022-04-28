@@ -26,12 +26,9 @@ public class SuplierManager
             suplier.ContactName = reader["ContactName"].ToString();
             supliers.Add(suplier);
         }
-
+        dbConn.Close();
         return supliers;
     }
-
-
-
 
 }
 
