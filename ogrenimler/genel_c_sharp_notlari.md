@@ -44,7 +44,7 @@ python da string türü için aynı yaklaşımı kullanıyor.
 
 zıt bir örnek için Golang verilebilir. Golang'ta string'lerle karakter bazında dolaşmak istiyorsanız rune kullanmanız gerekir. builtin olan string türü bunu sağlamaz. aynı for döngüsü veya eşdeğeri, string'in byte'larını döndürecektir.
 
-### Switch Ifadesi Karsilastirilabilir Turler Ile Calisabiliyor
+### Switch Ifadesi Karsilastirilabilir Farklı Turler Ile Calisabiliyor
 
 fazla soze gerek yok. c/c++'da switch ifadesinde degerlendirilen tiplerin integer olma zorunlulugu vardir. burada bu yok.
 
@@ -63,5 +63,31 @@ Ornek:
             }
 ```
 
-gordugunuz gibi (el kol isaretleriyle) string ile bir switch-case ifadesi yazdim. dil hata vermedi ve karsilastirmalari basariyla yapti.
+gordugunuz gibi string ile bir switch-case ifadesi yazdim. dil hata vermedi ve karsilastirmalari basariyla yapti.
+
+### `static` notlari
+
+Aşağıdaki kod, global bir x değişkeniymiş gibi davranıyor. `static`'i anlamak için önemli olabilir diye düşünüyorum.  
+İnstance almadan bir class kapsamında bildirilen bir değişkeni manipüle edebildik.
+```c#
+namespace stc;
+
+class StcTest
+{
+    public static int x = 1;
+}
+
+class Program
+{
+    static void Main()
+    {
+        StcTest.x++;
+        StcTest.x += 1111;
+        Console.WriteLine("Non instance X value : {0}", StcTest.x);
+    }
+}
+
+```
+
+Çıktımız "1113" oluyor.
 
