@@ -13,3 +13,19 @@ global bir degisken gibi calisiyor.
 sql objelerini  siliyor. Procedure gibi.   
 fakat `drop_xx` seklinde kullaniliyor. table, procedure gibi.
 
+
+
+## Ornek procedure'ler
+
+```tsql
+create procedure sp_getProductsCountByPrice(@price money)
+as
+begin
+return (select COUNT(*) from Products where UnitPrice > @price)
+end
+
+declare @productCount int
+exec @productCount = sp_getProductsCountByPrice 20
+
+select @productCount
+```
