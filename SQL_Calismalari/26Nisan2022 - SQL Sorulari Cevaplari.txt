@@ -1,29 +1,21 @@
-fiyati 20'den buyukleri getir:
+-- fiyati 20'den buyukleri getir:
 select * from Products where UnitPrice > 20
 
-
-// 'a' harfi iceren urunleri getir:
+-- 'a' harfi iceren urunleri getir:
 select * from Products where ProductName like '%a%'
 
 
-// 
 select * from supliers order by companyname
 
 select * from supliers order by companyname desc
 
 select * from suplier where country = 'uk' order by companyname
 
-
-
-
 select * from suplier where country = 'uk'
 
 select count(*) from suplier where price > 30
 
-
-
 select lower(productname) from products order by price desc
-
 
 select CompanyName from suplier where CompanyName like 'a%'
 
@@ -31,28 +23,19 @@ select CompanyName from suplier where CompanyName like 'a%' and price => 20
 
 select FirstName + ' ' + LastName from Employees
 
-
 select Price * 1.18 from product
-
-
 
 select count(*) from suplier where region is null
 
-
 select count(*) from suplier where region is not null
-
-
 
 select top 5  * from suplier
 
 select top 5 SupplierID, CompanyName from Suppliers
 
-
 select top 5 CompanyName from Suppliers order by CompanyName
 
 select top 5 * from products order by UnitPrice
-
-
 
 select top 5 avg(UnitPrice) from products order by UnitPrice
 
@@ -66,7 +49,6 @@ select ProductName, UnitPrice, UnitPrice * 0.18 from products
 
 
 
-
---Fiyatı 20den küçük ürünlerin adının başına TR ekle
+-- Fiyatı 20den küçük ürünlerin adının başına TR ekle
 select 'tr ' + ProductName from Products where UnitPrice < 20
 
