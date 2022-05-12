@@ -13,8 +13,6 @@ global bir degisken gibi calisiyor.
 sql objelerini  siliyor. Procedure gibi.   
 fakat `drop_xx` seklinde kullaniliyor. table, procedure gibi.
 
-
-
 ## Ornek procedure'ler
 
 ```tsql
@@ -28,4 +26,20 @@ declare @productCount int
 exec @productCount = sp_getProductsCountByPrice 20
 
 select @productCount
+```
+
+```tsql
+create procedure ps_addNewSupplier(@CompanyName nvarchar(max), @contactName nvarchar(max), @contactTitle nvarchar(max))
+as
+begin
+insert into Suppliers(CompanyName,  ContactName, ContactTitle) values(@CompanyName, @contactName, @contactTitle)
+end
+
+create procedure ps_listProducts(@stocks int)
+as
+begin
+select * from Products where UnitsInStock < @stocks
+end
+
+execute ps_listProducts 10
 ```
