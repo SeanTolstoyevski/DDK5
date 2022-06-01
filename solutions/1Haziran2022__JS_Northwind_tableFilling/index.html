@@ -16,6 +16,7 @@
             <th>Contact Name</th>
             <th>Contact Title</th>
             <th>City</th>
+            <th>Phone Number</th>
         </tr>
     </table>
 
@@ -445,18 +446,48 @@
         var tr3 = document.createElement("td");
         var tr4 = document.createElement("td");
         var tr5 = document.createElement("td");
+        var tr6 = document.createElement("td");
+
+
         tr1.innerHTML = item.id;
         tr2.innerHTML = item.companyName;
         tr3.innerHTML = item.contactName;
         tr4.innerHTML = item.contactTitle;
         tr5.innerHTML = item.address.city;
+
+        var formatted = item.address.phone.toString().replace("(", "");
+        formatted = formatted.replace(")", "");
+        formatted = formatted.replace("-", "");
+        formatted = formatted.replace(" ", "");
+
+        tr6.innerHTML = formatted;
+
         row.appendChild(tr1);
         row.appendChild(tr2);
         row.appendChild(tr3);
         row.appendChild(tr4);
         row.appendChild(tr5);
+        row.appendChild(tr6);
         document.getElementById("suptable").appendChild(row);
 
+    });
+
+    //     1) Country si "Germany" olan kaç adet supplier var?
+    var germanyCount = supLists.filter(q => q.address.country === "Germany").length;
+    console.log("count of germany", germanyCount);
+
+
+    // 2) Kaç adet supplier var?
+    var supCount = supLists.length;
+    console.log("count of suppliers", supCount);
+
+    // 3) ID si 16 olan supplier ın şehri nedir?
+    var name16 = supLists.find(q => q.id == 16).address.city;
+    console.log("17's name", name16);
+
+    var sortedByCompanyName = supLists.sort((a, b) => a.companyName.localeCompare(b.companyName));
+    sortedByCompanyName.forEach((item) => {
+        console.log(item.companyName);
     });
 
 </script>
