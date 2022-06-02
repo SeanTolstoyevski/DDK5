@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <label for="n1">Enter a number (calculate square)</label>
+    <input type="text" id="n1">
+    <button id="btn1">Calculate square</button>
+
+    <hr />
+
+
+
+    <label for="val1">Enter a number</label>
+    <input type="text" id="val1">
+
+    <label for="val2">Enter a number</label>
+    <input type="text" id="val2">
+
+    <label for="val3">Enter a number</label>
+    <input type="text" id="val3">
+    <button id="btn2">Calculate Average</button>
+
+<hr />
+
+
+
+<label for="val4">Enter any number for uses to button moves to right</label>
+<input type="text" id="val4">
+<button id="btn3">Move to right</button>
+
+</body>
+<script>
+
+    // 1) Ekrana bir input bir buton koy. Inputtan aldığın verinin karesini 
+    // console a yazdır.
+    $("#btn1").click(function () {
+        var n1 = Number($("#n1").val());
+        n1 *= n1;
+        console.log($("#n1").val() + "square  is " + n1);
+    });
+
+// 2) Ekrana üç input bir buton koy. Butona tıkladığında inputta 
+// bulunan sayıların ortalamasını console a yazsın.
+
+    $("#btn2").click(function () {
+        var val1 = Number($("#val1").val());
+        var val2 = Number($("#val2").val());
+        var val3 = Number($("#val3").val());
+        var avg = (val1 + val2 + val3) / 3;
+        console.log("Average is " + avg);
+    });
+
+
+    
+// 3) Ekrana bir input bir buton koy. Butona her tıkladığında BUTON 
+// inputtaki değer kadar sağa kaysın.
+    $("#btn3").click(function () {
+        var val4 = Number($("#val4").val());
+        $("#btn3").css("margin-left", val4 + "px");
+    });
+
+
+
+
+
+</script>
+
+</html>
