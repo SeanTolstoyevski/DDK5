@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1 id="res">result : 0</h1>
+    <label for="num1">Enter a number</label>
+    <input type="text" id="num1">
+
+
+    <label for="num2">Enter another number</label>
+    <input type="text" id="num2">
+
+    <button id="mul">Multiply</button>
+    <button id="div">Divide</button>
+    <button id="add">Add</button>
+    <button id="sub">Subtract</button>
+
+
+    <button id="sin">sin</button>
+
+
+</body>
+
+<script>
+    $("#mul").click(function () {
+        var num1 = $("#num1").val();
+        var num2 = $("#num2").val();
+        var res = Number(num1) * Number(num2);
+        $("#res").text("result : " + res);
+    });
+
+    $("#div").click(function () {
+        var num1 = $("#num1").val();
+        var num2 = $("#num2").val();
+        var res = Number(num1) / Number(num2);
+        $("#res").text("result : " + res);
+    });
+
+    $("#add").click(function () {
+        var num1 = $("#num1").val();
+        var num2 = $("#num2").val();
+        var res = Number(num1) + Number(num2);
+        $("#res").text("result : " + res);
+    });
+
+    $("#sub").click(function () {
+        var num1 = $("#num1").val();
+        var num2 = $("#num2").val();
+        var res = Number(num1) - Number(num2);
+        $("#res").text("result : " + res);
+    });
+
+
+    $("#sin").click(function () {
+        var num1 = $("#num1").val();
+        var res = Math.sin(num1);
+        $("#res").text("result : " + res);
+    });
+
+</script>
+
+
+</html>
