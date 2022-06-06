@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- title list -->
+    <ul id="titlelist">
+
+    </ul>
+</body>
+<script>
+    //https://jsonplaceholder.typicode.com/posts
+    //     7) Yukarıdaki url den çektiğin listeden title ları li içerisine yazdır. ( 
+    // Fetch ile )
+    fetch('https://jsonplaceholder.typicode.com/posts',
+        { method: 'GET' })
+        .then(function (res) {
+            return res.json();
+        }).then(function (data) {
+            for (var i = 0; i < data.length; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = data[i].title;
+                document.getElementById('titlelist').appendChild(li);
+            }
+
+            // 8) Title c harfi ile başlayan kaç post var?
+            var startCLetterCount = data.filter(function (item) {
+                return item.title.toLowerCase().startsWith('c');
+            }).length;
+            console.log(" Starting with c count: " + startCLetterCount);
+
+            // 9) Title t harfi ile BİTEN kaç adet post var
+            var endTLetterCount = data.filter(function (item) {
+                return item.title.toLowerCase().endsWith('t');
+            }).length;
+            console.log(" Ending with t count: " + endTLetterCount);
+        }).catch(function (err) {
+            console.log(err);
+        });
+
+
+</script>
+
+</html>
