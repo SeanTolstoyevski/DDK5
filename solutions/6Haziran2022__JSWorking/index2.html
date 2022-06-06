@@ -7,20 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<img src="https://i.picsum.photos/id/866/200/300.jpg" alt="a image">
-<button>Set height and with</button>
 
 <body>
-    <script>
-        // 2) Ekrana bir buton bir img koy. Img e herhangi bir resim ver. 
-        // Butona tıkladığında img boyutu 200*200 olsun.
-        document.querySelector("button").addEventListener("click", function () {
-            document.querySelector("img").style.height = "200px";
-            document.querySelector("img").style.width = "200px";
-        });
+    <img src="./imgs/t-s-4cxB8jODZ_k-unsplash.jpg" alt="a image">
+    <button>Set height and with</button>
 
-
-    </script>
 </body>
+<script>
+    // 2) Ekrana bir buton bir img koy. Img e herhangi bir resim ver. 
+    // Butona tıkladığında img boyutu 200*200 olsun.
+    document.getElementsByTagName("button")[0].addEventListener("click", function () {
+        document.getElementsByTagName("img")[0].style.height = "200px";
+        document.getElementsByTagName("img")[0].style.width = "200px";
+    });
+
+
+</script>
 
 </html>
