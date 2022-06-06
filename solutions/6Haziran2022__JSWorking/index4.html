@@ -9,38 +9,26 @@
 </head>
 
 <body>
-    <h1 id="emailcount"></h1>
-    <ul id="emaillist">
+    <!-- Square x² -->
 
-    </ul>
+    <h1></h1>
+    <!-- cube x³ -->
+    <h2></h2>
+    <label for="n1">Please enter number:</label>
+    <input type="number" id="n1">
+    <button id="btn1">Calculate cube and square</button>
 </body>
 <script>
-    // 4) Ekrana bir
-    // Url: https://jsonplaceholder.typicode.com/users 
-    // Yukarıdaki url de kullanıcılar bulunmaktadır. Ekrana bir ul bir li
-    // koy. Li içerisine web servisten çektiğiniz email adresleri yazılsın
-    // 6) Ekrana bir h1 koy. H1 içerisine yukarıdaki servisten gelen kaç 
-    // kullanıcı olduğunu yazsın.
-
-    fetch("https://jsonplaceholder.typicode.com/users", {
-        method: "GET"
-    })
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            var ul = document.getElementById("emaillist");
-            for (var i = 0; i < data.length; i++) {
-                var li = document.createElement("li");
-                li.innerHTML = data[i].email;
-                ul.appendChild(li);
-            }
-            document.getElementById("emailcount").innerHTML = data.length;
-        })
-        .catch(function (error) {
-            console.log(error);
-            document.getElementById("emailcount").innerHTML = "data could not be fetched. Error: " + error;
-        })
+    //     4) Ekrana bir input, bir h1 ve bir h2 elementi ve bir buton koy. 
+    // Butona tıkladığında inputtaki sayının karesini h1 e, küpünü h2 
+    // ye yazsın.
+    document.querySelector("button").addEventListener("click", function () {
+        var n1 = document.querySelector("input").value;
+        var n2 = n1 * n1;
+        var n3 = n1 * n1 * n1;
+        document.querySelector("h1").innerHTML = n2;
+        document.querySelector("h2").innerHTML = n3;
+    });
 
 </script>
 
