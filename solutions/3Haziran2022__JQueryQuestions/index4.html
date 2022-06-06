@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- create product table -->
+    <table id="ptable">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>quantity</th>
+        </tr>
+    </table>
+
+
+</body>
+
+
+<script>
+    // https://northwind.vercel.app/api/products
+    $.getJSON("https://northwind.vercel.app/api/products", function (data) {
+
+        data = JSON.parse(data);
+        for (i = 0; i < data.length; i++) {
+            var newRow = "<tr>";
+            newRow += "<td>";
+            newRow += toString(data[i].id);
+            newRow += "</td>";
+            newRow += "<td>";
+            newRow += data[i].name;
+            newRow += "</td>";
+            newRow += "<td>";
+            newRow += toString(data[i].price);
+            newRow += "</td>";
+            newRow += "<td>";
+            newRow += toString(data[i].quantity);
+            newRow += "</td>";
+            newRow += "</tr>";
+            console.log(newRow);
+            $("#ptable").append(newRow);
+        }
+
+    });
+
+</script>
+
+</html>

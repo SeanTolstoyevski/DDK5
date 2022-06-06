@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <input type="text" id="i1">
+    <button>Write as Uppercase</button>
+</body>
+<script>
+    // 1) Ekrana bir input, bir buton bir tane p elementi koy. Butona 
+    //tıkladığında inputtan aldığı değeri büyük harfle p içerisine 
+    // yazdırsın.
+    document.querySelector('button').addEventListener('click', function () {
+        var i1 = document.querySelector('#i1');
+        i1.value = i1.value.toUpperCase();
+    });
+</script>
+
+</html>

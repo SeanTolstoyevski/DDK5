@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span></span>
+    <span></span>
+    <span></span>
+    <button>Write Siemens</button>
+</body>
+<script>
+    //     3) Ekrana bir buton 3 tane span koy. Butona tıkladığında 3 spanın 
+    // da içine “Siemens” yazsın
+    document.querySelector("button").addEventListener("click", function () {
+        var allSpans = document.getElementsByTagName("span");
+        for (var i = 0; i < allSpans.length; i++) {
+            allSpans[i].innerHTML = "Siemens";
+            allSpans[i].style.fontSize = "50px";
+        }
+    });
+
+</script>
+
+</html>
